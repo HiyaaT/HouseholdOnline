@@ -1,0 +1,6 @@
+id,name,base_price,description,time_required
+1,House Cleaning,50.0,"Thorough cleaning of your home including dusting, vacuuming, and mopping.",2 hours
+2,Plumbing,100.0,Professional plumbing services for repairs and installations.,1 hour
+3,Electrical Repair,150.0,Expert electrical repair services including wiring and installations.,1.5 hours
+4,Gardening,75.0,Full garden maintenance and landscaping services.,3 hours
+5,Carpentry,120.0,Custom woodworking and carpentry services.,2 hours

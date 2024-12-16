@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monthly Activity Report</title>
+</head>
+<body>
+    <h1>Monthly Activity Report - {{ month }}</h1>
+    <p>Dear {{ customer.name }},</p>
+    <p>Here is your activity report for {{ month }}:</p>
+
+    <ul>
+        <li><strong>Total Services Requested:</strong> {{ total_requests }}</li>
+        <li><strong>Total Services Completed:</strong> {{ total_completed }}</li>
+    </ul>
+
+    <h2>Service Details:</h2>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+            <th>Service ID</th>
+            <th>Status</th>
+            <th>Service Date</th>
+            <th>Remarks</th>
+        </tr>
+        {% for service in services %}
+        <tr>
+            <td>{{ service.id }}</td>
+            <td>{{ service.status }}</td>
+            <td>{{ service.date_of_request }}</td>
+            <td>{{ service.remarks }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <p>Thank you for using our services!</p>
+</body>
+</html>

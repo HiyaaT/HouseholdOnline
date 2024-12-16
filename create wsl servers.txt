@@ -1,40 +1,37 @@
-
+#create a virtual environment
 python3 -m venv .venv
 
 
-5 servers, 
+6 servers, 
 
-backend:
+1. backend:
 source .venv/bin/activate
 pip install -r requirements.txt
 cd backend
 main.py
 
-worker
+2. worker
 source .venv/bin/activate
 cd backend
 
 celery -A main:celery_app worker -l INFO
 
-beat
+3. beat
 source .venv/bin/activate
 cd backend
 celery -A main:celery_app beat -l INFO
 
 
-mailhog
+4. mailhog
 
  ~/go/bin/MailHog
 
-redis
+5. redis
 
 sudo service redis-server start
 
-frontend
+6. frontend
 
 cd frontend
-npm install
+npm install 
 npm run dev
-
-
-8891a4b31882a759038ac544875f82da

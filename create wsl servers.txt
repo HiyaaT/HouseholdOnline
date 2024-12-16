@@ -1,0 +1,40 @@
+
+python3 -m venv .venv
+
+
+5 servers, 
+
+backend:
+source .venv/bin/activate
+pip install -r requirements.txt
+cd backend
+main.py
+
+worker
+source .venv/bin/activate
+cd backend
+
+celery -A main:celery_app worker -l INFO
+
+beat
+source .venv/bin/activate
+cd backend
+celery -A main:celery_app beat -l INFO
+
+
+mailhog
+
+ ~/go/bin/MailHog
+
+redis
+
+sudo service redis-server start
+
+frontend
+
+cd frontend
+npm install
+npm run dev
+
+
+8891a4b31882a759038ac544875f82da
